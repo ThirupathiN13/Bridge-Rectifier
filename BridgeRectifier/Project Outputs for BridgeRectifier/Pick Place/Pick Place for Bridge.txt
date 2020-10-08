@@ -1,0 +1,25 @@
+Altium Designer Pick and Place Locations
+D:\Thirupathi Docs\PCB Design\BridgeRectifier\Project Outputs for BridgeRectifier\Pick Place\Pick Place for Bridge.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       29-09-20
+Time:       18:37
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment      Layer    Footprint Center-X(mil) Center-Y(mil) Rotation Description                                                                   
+T1         230V         TopLayer 230V_AC   1703.701      1556.299      0        "AC-DC; Converter; 4.2kV reg; Single Output; 5W; 12V Out; RAC05-K/277 Series" 
+J2         1986717-2    TopLayer HEADDER   2391.102      1315.000      180      "Headers & Wire Housings UNSHRDED STD HDR 3.5MM 2POS"                         
+J1         1986717-2    TopLayer HEADDER   1218.898      2275.000      360      "Headers & Wire Housings UNSHRDED STD HDR 3.5MM 2POS"                         
+Fuse       1A           TopLayer FUSE      1253.347      2455.000      180      "FUSE BRD MNT 1A 125VAC/VDC"                                                  
+D4         1N4001       TopLayer D1N4007   2150.000      2370.748      270      "DIODE GEN PURP 50V 1A DO41"                                                  
+D3         1N4001       TopLayer D1N4007   1895.748      2455.000      180      "DIODE GEN PURP 50V 1A DO41"                                                  
+D2         1N4001       TopLayer D1N4007   1895.748      2310.000      180      "DIODE GEN PURP 50V 1A DO41"                                                  
+D1         1N4001       TopLayer D1N4007   1610.000      2365.748      270      "DIODE GEN PURP 50V 1A DO41"                                                  
+C3         0.1uf        TopLayer 0.1UF     2510.000      1793.071      90       "Multilayer Ceramic Capacitors MLCC - SMD/SMT 100nF 16V Y5V -20/+80%"         
+C2         0.1uf        TopLayer 0.1UF     2416.929      1435.000      180      "Multilayer Ceramic Capacitors MLCC - SMD/SMT 100nF 16V Y5V -20/+80%"         
+C1         470uf        TopLayer 470UF     2407.480      1610.000      360      "CAP CER 470UF 4V X5R 1812"                                                   
+7805       L78M05CDT-TR TopLayer 7805      2430.000      2114.095      90       "STMICROELECTRONICS - L78M05CDT-TR - VOLTAGE REG, FIXED, 5V, 0.5A, TO-252-3"  

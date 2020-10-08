@@ -1,0 +1,20 @@
+Move Component(s) Origin to Grid
+Filename     : D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc
+Date         : 29-09-2020
+Time         : 17:59:39
+Time Elapsed : 00:00:00
+
+
+    Component T1-230V (1310mil,1950mil) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Small Component J2-1986717-2 (2460mil,1315mil) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    Small Component J1-1986717-2 (1150mil,2275mil) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    SMT Small Component Fuse-1A (1350mil,2455mil) on Top Layer - Component origin is already ON grid. - Component pads are OFF grid. No action taken.
+    SMT Small Component D4-1N4001 (2150mil,2286.496mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D3-1N4001 (1811.496mil,2455mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D2-1N4001 (1811.496mil,2310mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D1-1N4001 (1610mil,2281.496mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C3-0.1uf (2510mil,1776.142mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C2-0.1uf (2433.858mil,1435mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C1-470uf (2334.961mil,1610mil) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component 7805-L78M05CDT-TR (2339.449mil,1983.189mil) on Top Layer - Component pads are OFF grid. No action taken.
+count : 12

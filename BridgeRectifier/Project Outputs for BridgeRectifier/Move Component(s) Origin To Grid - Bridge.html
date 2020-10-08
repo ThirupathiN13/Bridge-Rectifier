@@ -1,0 +1,239 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body { 
+			font-family : segoe ui;
+		}
+
+		td, th {  
+			padding: 0.5em;
+			text-align : left;
+		}
+		th { 
+			background-color : #EEEEEE;
+		
+		}
+		th.column1, td.column1 { 
+			width : 50%; 
+		}
+
+        th.column2, td.column2 {
+            width : 25%;
+        }
+
+		table { 
+			width : 100%; 
+            font-size: 0.9em;
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Move Component(s) Origin to Grid</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Move Component(s) Origin to Grid</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">29-09-2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">17:59:39</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc" class="file"><acronym title="D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc">D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc</acronym></a></td>
+</tr>
+</table><a name="IDUEIZGK4BP2UYKGTTOPXGTF1UOP3YZVTOQHSLD0EMZEDS32PRJ44F"><h2>Components Origin</h2></a><a name="IDZ1ERZUAQD43SFFWAZRBXNJB3QOYMCQ4KW0XYY4LXVVSL53ULL3BJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning"></th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1111.181mil|Location2.X=2227.457mil|Location1.Y=929.236mil|Location2.Y=2277.481mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1111.181mil|Location2.X=2227.457mil|Location1.Y=929.236mil|Location2.Y=2277.481mil|Absolute=True">Component T1-230V (1310mil,1950mil) on Top Layer</acronym></a> - Component origin is already ON grid. - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1941mil|Location2.X=2521.021mil|Location1.Y=1228.386mil|Location2.Y=1481.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1941mil|Location2.X=2521.021mil|Location1.Y=1228.386mil|Location2.Y=1481.981mil|Absolute=True">Small Component J2-1986717-2 (2460mil,1315mil) on Top Layer</acronym></a> - Component origin is already ON grid. - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1088.795mil|Location2.X=1668.641mil|Location1.Y=2208.071mil|Location2.Y=2461.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1088.795mil|Location2.X=1668.641mil|Location1.Y=2208.071mil|Location2.Y=2461.981mil|Absolute=True">Small Component J1-1986717-2 (1150mil,2275mil) on Top Layer</acronym></a> - Component origin is already ON grid. - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=811.674mil|Location2.X=1416.992mil|Location1.Y=2349.944mil|Location2.Y=2629.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=811.674mil|Location2.X=1416.992mil|Location1.Y=2349.944mil|Location2.Y=2629.981mil|Absolute=True">SMT Small Component Fuse-1A (1350mil,2455mil) on Top Layer</acronym></a> - Component origin is already ON grid. - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2093.819mil|Location2.X=2233.74mil|Location1.Y=2015.542mil|Location2.Y=2619.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2093.819mil|Location2.X=2233.74mil|Location1.Y=2015.542mil|Location2.Y=2619.981mil|Absolute=True">SMT Small Component D4-1N4001 (2150mil,2286.496mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1540.542mil|Location2.X=2044.842mil|Location1.Y=2371.26mil|Location2.Y=2610.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1540.542mil|Location2.X=2044.842mil|Location1.Y=2371.26mil|Location2.Y=2610.981mil|Absolute=True">SMT Small Component D3-1N4001 (1811.496mil,2455mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1540.542mil|Location2.X=2044.842mil|Location1.Y=2226.26mil|Location2.Y=2465.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1540.542mil|Location2.X=2044.842mil|Location1.Y=2226.26mil|Location2.Y=2465.981mil|Absolute=True">SMT Small Component D2-1N4001 (1811.496mil,2310mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1553.819mil|Location2.X=1693.74mil|Location1.Y=2010.542mil|Location2.Y=2614.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1553.819mil|Location2.X=1693.74mil|Location1.Y=2010.542mil|Location2.Y=2614.981mil|Absolute=True">SMT Small Component D1-1N4001 (1610mil,2281.496mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2469mil|Location2.X=2588.968mil|Location1.Y=1748.52mil|Location2.Y=1970.122mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2469mil|Location2.X=2588.968mil|Location1.Y=1748.52mil|Location2.Y=1970.122mil|Absolute=True">SMT Small Component C3-0.1uf (2510mil,1776.142mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2339.579mil|Location2.X=2461.48mil|Location1.Y=1394.067mil|Location2.Y=1562.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2339.579mil|Location2.X=2461.48mil|Location1.Y=1394.067mil|Location2.Y=1562.981mil|Absolute=True">SMT Small Component C2-0.1uf (2433.858mil,1435mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2274.843mil|Location2.X=2896.909mil|Location1.Y=1522.323mil|Location2.Y=1809.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2274.843mil|Location2.X=2896.909mil|Location1.Y=1522.323mil|Location2.Y=1809.981mil|Absolute=True">SMT Small Component C1-470uf (2334.961mil,1610mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2252.772mil|Location2.X=2607.228mil|Location1.Y=1920.134mil|Location2.Y=2751.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Thirupathi Docs\PCB Design\BridgeRectifier\Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2252.772mil|Location2.X=2607.228mil|Location1.Y=1920.134mil|Location2.Y=2751.67mil|Absolute=True">SMT Small Component 7805-L78M05CDT-TR (2339.449mil,1983.189mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
